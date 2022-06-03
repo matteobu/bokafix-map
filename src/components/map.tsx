@@ -9,9 +9,6 @@ export default function Map() {
     function getUserLocation() {
         function success(pos: any) {
             var crd = pos.coords;
-            console.log("Your current position is:");
-            console.log("Latitude: ", crd.latitude);
-            console.log("Longitude: ", crd.longitude);
             let coordinates: any = [crd.latitude, crd.longitude];
             setArrayOfLocation(arrayOfLocation.concat(coordinates));
             setCenter({ lat: crd.latitude, lng: crd.longitude });
